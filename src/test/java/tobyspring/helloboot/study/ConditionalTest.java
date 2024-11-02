@@ -25,7 +25,6 @@ public class ConditionalTest {
                     Assertions.assertThat(context).hasSingleBean(MyBean.class);
                     Assertions.assertThat(context).hasSingleBean(Config1.class);
                 });
-        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext();
 
         ApplicationContextRunner contextRunner2 = new ApplicationContextRunner();
 
