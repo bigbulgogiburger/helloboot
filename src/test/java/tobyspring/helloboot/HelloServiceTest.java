@@ -2,6 +2,7 @@ package tobyspring.helloboot;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -23,11 +24,15 @@ import java.lang.annotation.Target;
 
 }
 
+@HelloBootTest
 public class HelloServiceTest {
+
+    @Autowired
+    HelloRepository helloRepository;
 
     @FastUnitTest
     void simpleHelloTest(){
-        SimpleHelloService helloService = new SimpleHelloService();
+        SimpleHelloService helloService = new SimpleHelloService(helloRepository);
 
         String ret = helloService.sayHello("Test");
 
