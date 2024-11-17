@@ -3,6 +3,7 @@ package tobyspring.helloboot;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.JdbcTest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
@@ -14,7 +15,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 
-@HelloBootTest
+@JdbcTest
 @Transactional
 public class DataSourceTest {
     @Autowired

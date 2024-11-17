@@ -3,6 +3,7 @@ package tobyspring.helloboot;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -24,7 +25,7 @@ import java.lang.annotation.Target;
 
 }
 
-@HelloBootTest
+@SpringBootTest
 public class HelloServiceTest {
 
     @Autowired
